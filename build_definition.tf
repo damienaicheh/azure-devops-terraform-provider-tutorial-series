@@ -7,7 +7,7 @@ resource "azuredevops_build_definition" "build_definitions" {
     repo_type   = "TfsGit"
     branch_name = "refs/heads/develop"
     repo_id     = azuredevops_git_repository.this[count.index].id
-    yml_path    = "azure_pipeline.yml"
+    yml_path    = "azure-pipelines.yml"
   }
 
   ci_trigger {
